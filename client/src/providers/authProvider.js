@@ -32,7 +32,7 @@ function AuthProvider(props) {
     return new Promise((resolve, reject) => {
       fetch("http://localhost:5000/auth/login", {
         method: "POST",
-        mode: "cors", // no-cors, *cors, same-origin
+        mode: "no-cors", // no-cors, *cors, same-origin
         headers: {
           "Content-Type": "application/json",
         },
@@ -68,22 +68,22 @@ function AuthProvider(props) {
 
 export default AuthProvider;
 
-function authenticate(token) {
-  return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/auth/authenticate", {
-      method: "POST",
-      mode: "cors", // no-cors, *cors, same-origin
-      headers: {
-        authorization: "Bearer " + token,
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          response.json().then((error) => reject(error));
-        } else {
-          response.json().then((success) => resolve(success));
-        }
-      })
-      .catch((error) => reject(error));
-  });
-}
+// function authenticate(token) {
+//   return new Promise((resolve, reject) => {
+//     fetch("http://localhost:5000/auth/authenticate", {
+//       method: "POST",
+//       mode: "cors", // no-cors, *cors, same-origin
+//       headers: {
+//         authorization: "Bearer " + token,
+//       },
+//     })
+//       .then((response) => {
+//         if (!response.ok) {
+//           response.json().then((error) => reject(error));
+//         } else {
+//           response.json().then((success) => resolve(success));
+//         }
+//       })
+//       .catch((error) => reject(error));
+//   });
+// }

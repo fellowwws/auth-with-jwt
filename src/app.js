@@ -11,7 +11,7 @@ const app = express();
 
 app.use(morgan("dev"));
 app.use(helmet());
-app.use(cors({ origin: "https://auth-with-jwt.herokuapp.com" }));
+// app.use(cors());
 app.use(express.json());
 
 app.use("/auth", auth);
