@@ -30,7 +30,7 @@ function AuthProvider(props) {
 
   function logIn(email, password) {
     return new Promise((resolve, reject) => {
-      fetch("http://localhost:5000/auth/login", {
+      fetch("/auth/login", {
         method: "POST",
         mode: "no-cors", // no-cors, *cors, same-origin
         headers: {

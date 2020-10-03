@@ -206,9 +206,9 @@ export default SignUpForm;
 
 function signUp(forename, surname, email, password) {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/auth/signup", {
+    fetch("/auth/signup", {
       method: "POST",
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "no-cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
       },
