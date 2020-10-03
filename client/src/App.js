@@ -55,7 +55,7 @@ function SignUp() {
 function LogIn() {
   return (
     <Layout>
-      <h1 className='text-center py-2'>Log In</h1>
+      <h1 className='text-center py-2'>Log In 🔐</h1>
       <LogInForm />
     </Layout>
   );
