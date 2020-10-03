@@ -32,7 +32,7 @@ function AuthProvider(props) {
     return new Promise((resolve, reject) => {
       fetch("/auth/login", {
         method: "POST",
-        mode: "cors", // no-cors, *cors, same-origin
+        mode: "no-cors", // no-cors, *cors, same-origin
         headers: {
           "Content-Type": "application/json",
         },
