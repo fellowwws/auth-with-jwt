@@ -208,7 +208,7 @@ function signUp(forename, surname, email, password) {
   return new Promise((resolve, reject) => {
     fetch("/auth/signup", {
       method: "POST",
-      mode: "no-cors", // no-cors, *cors, same-origin
+      mode: "cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
       },
